@@ -162,18 +162,7 @@
         "name": "Import Content Items",
         "description": "Description of import content items",
         "serviceType": "CONTENT",
-        "url": "content-sources/content-source/content-items",
-        "outputParameters": [
-          {
-            "uniqueId": "parameter1",
-            "name": "Parameter1",
-            "displayName": "Parameter1",
-            "type": "string",
-            "isOptional": false,
-            "defaultValue": null,
-            "description": "Description of the first parameter of the first import content items"
-          }
-        ]
+        "url": "content-sources/content-source/content-items"
       },
       {
         "name": "Connectivity Test",
