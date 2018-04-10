@@ -1,58 +1,186 @@
 {
-	"name": "Github Content Plugin",
-	"vendor": "CA Southen Africa (Charl Klein)",
-	"uniqueId": "ca.sa.cde.github",
-	"description": "CA Release Automation Github Content Plugin powered by Hook.io",
-	"iconUrl": "https://cloud.githubusercontent.com/assets/14964166/12397368/7823d66e-be15-11e5-9b94-86673ff64912.png",
-	"version": "0.9",
-	"relativeUrl": false,
-	"endpointTemplate": {
-		"name": "Bamboo - Build",
-		"uniqueId": "ca.cde.bamboo.build.endpoint",
-		"description": "Bamboo Endpoint",
-		"serviceType": "ENDPOINT",
-		"endPointType": "Bamboo",
-		"parameters": [{
-			"name": "user",
-			"uniqueId": "ca.cde.bamboo.endpoint.user",
-			"displayName": "Bamboo User",
-			"type": "string",
-			"isOptional": false
-		},
-		{
-			"name": "Password",
-			"uniqueId": "ca.cde.bamboo.endpoint.password",
-			"displayName": "Bamboo Password",
-			"type": "password",
-			"isOptional": false
-		},
-		{
-			"name": "bambooBuildProject",
-			"uniqueId": "ca.cde.bamboo.endpoint.buildProject",
-			"displayName": "Bamboo Build Project",
-			"type": "string",
-			"isOptional": false
-		}]
-	},
-	"services": [{
-		"name": "Run Bamboo Build",
-		"uniqueId": "ca.cde.bamboo.task.run_build",
-		"description": "Use this task to run a Bamboo directed build",
-		"serviceType": "TASK",
-		"url": "https://hook.io/cde-plugins/runBamboo-build",
-		"parameters": [{
-			"planKey": "planKey",
-			"uniqueId": "ca.cde.bamboo.task.run_build.planKey",
-			"displayName": "Plan Key",
-			"type": "string",
-			"isOptional": false
-		},
-		{
-			"name": "buildStatus",
-			"uniqueId": "ca.cde.bamboo.task.run_build.buildStatus",
-			"displayName": "Build Status",
-			"type": "string",
-			"isOptional": true
-		}]
-	}]
-}
+    "name": "Sample",
+    "vendor": "CA Technologies",
+    "uniqueId": "CA Technologies Sample",
+    "description": "Sample Plugin for CA Continuous Delivery Edition",
+    "version": "1.0",
+    "iconUrl": "CA.svg",
+    "endpointTemplate": {
+      "uniqueId": "Endpoint",
+      "name": "Sample Endpoint",
+      "description": "A Sample plugin endpoint",
+      "serviceType": "ENDPOINT",
+      "endPointType": "Endpoint",
+      "url": "Endpoint",
+      "parameters": [
+        {
+          "uniqueId": "URL",
+          "name": "URL",
+          "displayName": "URL",
+          "type": "string",
+          "isOptional": false,
+          "defaultValue": null,
+          "description": "URL"
+        },
+        {
+          "uniqueId": "username",
+          "name": "username",
+          "displayName": "Username",
+          "type": "string",
+          "isOptional": false,
+          "defaultValue": null,
+          "description": "Username"
+        },
+        {
+          "uniqueId": "password",
+          "name": "password",
+          "displayName": "Password",
+          "type": "password",
+          "isOptional": false,
+          "defaultValue": null,
+          "description": "Password"
+        },
+        {
+          "uniqueId": "useProxy",
+          "name": "useProxy",
+          "displayName": "Use Proxy",
+          "type": "boolean",
+          "isOptional": true,
+          "defaultValue": "false",
+          "description": "Connect through a proxy",
+          "possibleValues": [
+            {
+              "value": "false"
+            },
+            {
+              "value": "true",
+              "parameters": [
+                {
+                  "uniqueId": "proxyUrl",
+                  "name": "proxyUrl",
+                  "displayName": "Proxy Url",
+                  "type": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "description": "Proxy Url"
+                },
+                {
+                  "uniqueId": "proxyUsername",
+                  "name": "proxyUsername",
+                  "displayName": "Proxy Username",
+                  "type": "string",
+                  "isOptional": true,
+                  "defaultValue": null,
+                  "description": "Proxy Username"
+                },
+                {
+                  "uniqueId": "proxyPassword",
+                  "name": "proxyPassword",
+                  "displayName": "Proxy Password",
+                  "type": "password",
+                  "isOptional": true,
+                  "defaultValue": null,
+                  "description": "Proxy Password"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "services": [
+      {
+        "uniqueId": "Task1",
+        "name": "Task1",
+        "description": "Description of the first task",
+        "serviceType": "TASK",
+        "url": "tasks/task1",
+        "inputParameters": [
+          {
+            "uniqueId": "parameter1",
+            "name": "parameter1",
+            "displayName": "Parameter1",
+            "type": "string",
+            "isOptional": false,
+            "defaultValue": null,
+            "description": "Description of the first parameter of the first task",
+            "url": "tasks/task1/parameter1/values"
+          },
+          {
+            "uniqueId": "parameter2",
+            "name": "parameter2",
+            "displayName": "Parameter2",
+            "type": "string",
+            "isOptional": false,
+            "defaultValue": "GET",
+            "description": "Description of the second parameter of the first task",
+            "possibleValues": [
+              {
+                "value": "GET"
+              },
+              {
+                "value": "POST"
+              },
+              {
+                "value": "PUT"
+              }
+            ]
+          },
+          {
+            "uniqueId": "parameter3",
+            "name": "parameter3",
+            "displayName": "Parameter3",
+            "type": "textarea",
+            "isOptional": true,
+            "defaultValue": null,
+            "description": "Description of the third parameter of the first task",
+            "url": "tasks/task1/parameter3/values",
+            "dependencies": [
+              "parameter1"
+            ]
+          }
+        ],
+        "outputParameters": [
+          {
+            "uniqueId": "output_parameter1",
+            "name": "output_parameter1",
+            "displayName": "output_parameter1",
+            "description": "description of output_parameter1"
+          }
+        ]
+      },
+      {
+        "uniqueId": "Import Application Model",
+        "name": "Import Application Model",
+        "description": "Description of import application model",
+        "serviceType": "APPLICATION",
+        "url": "application-sources/application-source",
+        "inputParameters": null
+      },
+      {
+        "uniqueId": "Import Content Items",
+        "name": "Import Content Items",
+        "description": "Description of import content items",
+        "serviceType": "CONTENT",
+        "url": "content-sources/content-source/content-items",
+        "outputParameters": [
+          {
+            "uniqueId": "parameter1",
+            "name": "Parameter1",
+            "displayName": "Parameter1",
+            "type": "string",
+            "isOptional": false,
+            "defaultValue": null,
+            "description": "Description of the first parameter of the first import content items"
+          }
+        ]
+      },
+      {
+        "name": "Connectivity Test",
+        "description": "Connection Test",
+        "serviceType": "CONNECTIVITY_TEST",
+        "url": "connectivity-tests/connectivity-test",
+        "uniqueId": "Connectivity Test"
+      }
+    ]
+  }
