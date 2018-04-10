@@ -96,19 +96,42 @@
             }]
         },
         {
-            "uniqueId": "Import Application Model",
-            "name": "Import Application Model",
-            "description": "Description of import application model",
-            "serviceType": "APPLICATION",
-            "url": "application-sources/application-source",
-            "inputParameters": null
-        },
-        {
             "uniqueId": "Import Content Items",
             "name": "Import Content Items",
             "description": "Description of import content items",
             "serviceType": "CONTENT",
-            "url": "content-sources/content-source/content-items"
+            "url": "content-sources/content-source/content-items",
+            "inputParameters": [{
+                "uniqueId": "parameter1",
+                "name": "parameter1",
+                "displayName": "Parameter1",
+                "type": "string",
+                "isOptional": false,
+                "defaultValue": null,
+                "description": "Description of the first parameter of the first task",
+                "url": "tasks/task1/parameter1/values"
+            },
+            {
+                "uniqueId": "parameter2",
+                "name": "parameter2",
+                "displayName": "Parameter2",
+                "type": "string",
+                "isOptional": false,
+                "defaultValue": "GET",
+                "description": "Description of the second parameter of the first task",
+                "possibleValues": [{
+                        "value": "GET"
+                    },
+                    {
+                        "value": "POST"
+                    },
+                    {
+                        "value": "PUT"
+                    }
+                ]
+            }
+           
+        ]
         },
         {
             "name": "Connectivity Test",
