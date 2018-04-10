@@ -1,1 +1,6 @@
+node_modules/*
+public/*
+test/artifacts/*
+.env
+.DS_Store
 .vscode

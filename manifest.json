@@ -1,175 +1,121 @@
 {
-    "name": "Sample",
-    "vendor": "CA Technologies",
-    "uniqueId": "CA Technologies Sample",
-    "description": "Sample Plugin for CA Continuous Delivery Edition",
-    "version": "1.0",
-    "iconUrl": "CA.svg",
+    "name": "Github Content Plugin",
+    "vendor": "CA Southen Africa (Charl Klein)",
+    "uniqueId": "ca.sa.cde.githubcontent",
+    "description": "CA Release Automation Github Content Plugin powered by Hook.io",
+    "iconUrl": "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png",
+    "version": "0.9",
+    "relativeUrl": false,
     "endpointTemplate": {
-      "uniqueId": "Endpoint",
-      "name": "Sample Endpoint",
-      "description": "A Sample plugin endpoint",
-      "serviceType": "ENDPOINT",
-      "endPointType": "Endpoint",
-      "url": "Endpoint",
-      "parameters": [
-        {
-          "uniqueId": "URL",
-          "name": "URL",
-          "displayName": "URL",
-          "type": "string",
-          "isOptional": false,
-          "defaultValue": null,
-          "description": "URL"
-        },
-        {
-          "uniqueId": "username",
-          "name": "username",
-          "displayName": "Username",
-          "type": "string",
-          "isOptional": false,
-          "defaultValue": null,
-          "description": "Username"
-        },
-        {
-          "uniqueId": "password",
-          "name": "password",
-          "displayName": "Password",
-          "type": "password",
-          "isOptional": false,
-          "defaultValue": null,
-          "description": "Password"
-        },
-        {
-          "uniqueId": "useProxy",
-          "name": "useProxy",
-          "displayName": "Use Proxy",
-          "type": "boolean",
-          "isOptional": true,
-          "defaultValue": "false",
-          "description": "Connect through a proxy",
-          "possibleValues": [
-            {
-              "value": "false"
+        "uniqueId": "ca.sa.cde.githubcontent.endpoint",
+        "name": "Github Repository Endpoint",
+        "description": "Github Repository Details",
+        "serviceType": "ENDPOINT",
+        "endPointType": "Github",
+        "parameters": [{
+                "uniqueId": "ca.sa.cde.githubcontent.endpoint.repoowner",
+                "name": "Repository Owner",
+                "displayName": "Repository Owner",
+                "type": "string",
+                "isOptional": false,
+                "defaultValue": null
             },
             {
-              "value": "true",
-              "parameters": [
-                {
-                  "uniqueId": "proxyUrl",
-                  "name": "proxyUrl",
-                  "displayName": "Proxy Url",
-                  "type": "string",
-                  "isOptional": false,
-                  "defaultValue": null,
-                  "description": "Proxy Url"
-                },
-                {
-                  "uniqueId": "proxyUsername",
-                  "name": "proxyUsername",
-                  "displayName": "Proxy Username",
-                  "type": "string",
-                  "isOptional": true,
-                  "defaultValue": null,
-                  "description": "Proxy Username"
-                },
-                {
-                  "uniqueId": "proxyPassword",
-                  "name": "proxyPassword",
-                  "displayName": "Proxy Password",
-                  "type": "password",
-                  "isOptional": true,
-                  "defaultValue": null,
-                  "description": "Proxy Password"
-                }
-              ]
+                "uniqueId": "ca.sa.cde.githubcontent.endpoint.repository",
+                "name": "Repository",
+                "displayName": "Repository",
+                "type": "string",
+                "isOptional": false,
+                "defaultValue": null
+            },
+            {
+                "uniqueId": "ca.sa.cde.githubcontent.endpoint.useragent",
+                "name": "User Agent",
+                "displayName": "User Agent",
+                "description": "User Agent is Required to Access the Github API, Please put you application name or Github Username Here",
+                "type": "string",
+                "isOptional": false,
+                "defaultValue": null
             }
-          ]
-        }
-      ]
-    },
-    "services": [
-      {
-        "uniqueId": "Task1",
-        "name": "Task1",
-        "description": "Description of the first task",
-        "serviceType": "TASK",
-        "url": "tasks/task1",
-        "inputParameters": [
-          {
-            "uniqueId": "parameter1",
-            "name": "parameter1",
-            "displayName": "Parameter1",
-            "type": "string",
-            "isOptional": false,
-            "defaultValue": null,
-            "description": "Description of the first parameter of the first task",
-            "url": "tasks/task1/parameter1/values"
-          },
-          {
-            "uniqueId": "parameter2",
-            "name": "parameter2",
-            "displayName": "Parameter2",
-            "type": "string",
-            "isOptional": false,
-            "defaultValue": "GET",
-            "description": "Description of the second parameter of the first task",
-            "possibleValues": [
-              {
-                "value": "GET"
-              },
-              {
-                "value": "POST"
-              },
-              {
-                "value": "PUT"
-              }
-            ]
-          },
-          {
-            "uniqueId": "parameter3",
-            "name": "parameter3",
-            "displayName": "Parameter3",
-            "type": "textarea",
-            "isOptional": true,
-            "defaultValue": null,
-            "description": "Description of the third parameter of the first task",
-            "url": "tasks/task1/parameter3/values",
-            "dependencies": [
-              "parameter1"
-            ]
-          }
-        ],
-        "outputParameters": [
-          {
-            "uniqueId": "output_parameter1",
-            "name": "output_parameter1",
-            "displayName": "output_parameter1",
-            "description": "description of output_parameter1"
-          }
         ]
-      },
-      {
-        "uniqueId": "Import Application Model",
-        "name": "Import Application Model",
-        "description": "Description of import application model",
-        "serviceType": "APPLICATION",
-        "url": "application-sources/application-source",
-        "inputParameters": null
-      },
-      {
-        "uniqueId": "Import Content Items",
-        "name": "Import Content Items",
-        "description": "Description of import content items",
-        "serviceType": "CONTENT",
-        "url": "content-sources/content-source/content-items"
-      },
-      {
-        "name": "Connectivity Test",
-        "description": "Connection Test",
-        "serviceType": "CONNECTIVITY_TEST",
-        "url": "connectivity-tests/connectivity-test",
-        "uniqueId": "Connectivity Test"
-      }
+    },
+    "services": [{
+            "uniqueId": "Task1",
+            "name": "Task1",
+            "description": "Description of the first task",
+            "serviceType": "TASK",
+            "url": "tasks/task1",
+            "inputParameters": [{
+                    "uniqueId": "parameter1",
+                    "name": "parameter1",
+                    "displayName": "Parameter1",
+                    "type": "string",
+                    "isOptional": false,
+                    "defaultValue": null,
+                    "description": "Description of the first parameter of the first task",
+                    "url": "tasks/task1/parameter1/values"
+                },
+                {
+                    "uniqueId": "parameter2",
+                    "name": "parameter2",
+                    "displayName": "Parameter2",
+                    "type": "string",
+                    "isOptional": false,
+                    "defaultValue": "GET",
+                    "description": "Description of the second parameter of the first task",
+                    "possibleValues": [{
+                            "value": "GET"
+                        },
+                        {
+                            "value": "POST"
+                        },
+                        {
+                            "value": "PUT"
+                        }
+                    ]
+                },
+                {
+                    "uniqueId": "parameter3",
+                    "name": "parameter3",
+                    "displayName": "Parameter3",
+                    "type": "textarea",
+                    "isOptional": true,
+                    "defaultValue": null,
+                    "description": "Description of the third parameter of the first task",
+                    "url": "tasks/task1/parameter3/values",
+                    "dependencies": [
+                        "parameter1"
+                    ]
+                }
+            ],
+            "outputParameters": [{
+                "uniqueId": "output_parameter1",
+                "name": "output_parameter1",
+                "displayName": "output_parameter1",
+                "description": "description of output_parameter1"
+            }]
+        },
+        {
+            "uniqueId": "Import Application Model",
+            "name": "Import Application Model",
+            "description": "Description of import application model",
+            "serviceType": "APPLICATION",
+            "url": "application-sources/application-source",
+            "inputParameters": null
+        },
+        {
+            "uniqueId": "Import Content Items",
+            "name": "Import Content Items",
+            "description": "Description of import content items",
+            "serviceType": "CONTENT",
+            "url": "content-sources/content-source/content-items"
+        },
+        {
+            "name": "Connectivity Test",
+            "description": "Connection Test",
+            "serviceType": "CONNECTIVITY_TEST",
+            "url": "connectivity-tests/connectivity-test",
+            "uniqueId": "Connectivity Test"
+        }
     ]
-  }
+}

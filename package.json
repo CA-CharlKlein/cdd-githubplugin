@@ -1,0 +1,23 @@
+{
+  "name": "cdd-githubplugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CA-CharlKlein/cdd-githubplugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CA-CharlKlein/cdd-githubplugin/issues"
+  },
+  "homepage": "https://github.com/CA-CharlKlein/cdd-githubplugin#readme",
+  "dependencies": {
+    "http": "0.0.0",
+    "httpserver": "^0.3.0"
+  }
+}
