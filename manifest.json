@@ -1,0 +1,58 @@
+{
+	"name": "Github Content Plugin",
+	"vendor": "CA Southen Africa (Charl Klein)",
+	"uniqueId": "ca.sa.cde.github",
+	"description": "CA Release Automation Github Content Plugin powered by Hook.io",
+	"iconUrl": "https://cloud.githubusercontent.com/assets/14964166/12397368/7823d66e-be15-11e5-9b94-86673ff64912.png",
+	"version": "0.9",
+	"relativeUrl": false,
+	"endpointTemplate": {
+		"name": "Bamboo - Build",
+		"uniqueId": "ca.cde.bamboo.build.endpoint",
+		"description": "Bamboo Endpoint",
+		"serviceType": "ENDPOINT",
+		"endPointType": "Bamboo",
+		"parameters": [{
+			"name": "user",
+			"uniqueId": "ca.cde.bamboo.endpoint.user",
+			"displayName": "Bamboo User",
+			"type": "string",
+			"isOptional": false
+		},
+		{
+			"name": "Password",
+			"uniqueId": "ca.cde.bamboo.endpoint.password",
+			"displayName": "Bamboo Password",
+			"type": "password",
+			"isOptional": false
+		},
+		{
+			"name": "bambooBuildProject",
+			"uniqueId": "ca.cde.bamboo.endpoint.buildProject",
+			"displayName": "Bamboo Build Project",
+			"type": "string",
+			"isOptional": false
+		}]
+	},
+	"services": [{
+		"name": "Run Bamboo Build",
+		"uniqueId": "ca.cde.bamboo.task.run_build",
+		"description": "Use this task to run a Bamboo directed build",
+		"serviceType": "TASK",
+		"url": "https://hook.io/cde-plugins/runBamboo-build",
+		"parameters": [{
+			"planKey": "planKey",
+			"uniqueId": "ca.cde.bamboo.task.run_build.planKey",
+			"displayName": "Plan Key",
+			"type": "string",
+			"isOptional": false
+		},
+		{
+			"name": "buildStatus",
+			"uniqueId": "ca.cde.bamboo.task.run_build.buildStatus",
+			"displayName": "Build Status",
+			"type": "string",
+			"isOptional": true
+		}]
+	}]
+}
