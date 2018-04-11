@@ -50,53 +50,19 @@
                     "name": "milestone",
                     "displayName": "Milestone",
                     "type": "string",
-                    "isOptional": true,
+                    "isOptional": false,
                     "defaultValue": null,
-                    "description": "Enter the Milestone identifier, this parameter is optional. Leaving it black will retrieve all open issues",
+                    "description": "Enter the Milestone identifier. This is the Mile Stone Number Not the Name. Use * for issues with any milestone are accepted, Use none for issues without a milestone",
                     "url": "tasks/task1/parameter1/values"
                 },
                 {
                     "uniqueId": "ca.sa.cde.githubcontent.import.label",
                     "name": "issueLabel",
-                    "displayName": "Github Issue Label",
+                    "displayName": "Github Issue Labels",
                     "type": "string",
                     "isOptional": false,
                     "defaultValue": "Bug",
-                    "description": "Select the Type of Issue you want to retrieve from Github.",
-                    "possibleValues": [{
-                            "value": "breaking change"
-                        },
-                        {
-                            "value": "bug"
-                        },
-                        {
-                            "value": "documentation"
-                        },
-                        {
-                            "value": "duplicate"
-                        },
-                        {
-                            "value": "enhancement"
-                        },
-                        {
-                            "value": "help wanted"
-                        },
-                        {
-                            "value": "in progress"
-                        },
-                        {
-                            "value": "invalid"
-                        },
-                        {
-                            "value": "question"
-                        },
-                        {
-                            "value": "ready"
-                        },
-                        {
-                            "value": "wont fix"
-                        }
-                    ]
+                    "description": "Enter a Comma separated listof the Types of Issues you want to retrieve from Github."
                 },
                 {
                     "uniqueId": "ca.sa.cde.githubcontent.import.state",
