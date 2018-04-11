@@ -40,98 +40,82 @@
         ]
     },
     "services": [{
-            "uniqueId": "Task1",
-            "name": "Task1",
-            "description": "Description of the first task",
-            "serviceType": "TASK",
-            "url": "tasks/task1",
-            "inputParameters": [{
-                    "uniqueId": "parameter1",
-                    "name": "parameter1",
-                    "displayName": "Parameter1",
-                    "type": "string",
-                    "isOptional": false,
-                    "defaultValue": null,
-                    "description": "Description of the first parameter of the first task",
-                    "url": "tasks/task1/parameter1/values"
-                },
-                {
-                    "uniqueId": "parameter2",
-                    "name": "parameter2",
-                    "displayName": "Parameter2",
-                    "type": "string",
-                    "isOptional": false,
-                    "defaultValue": "GET",
-                    "description": "Description of the second parameter of the first task",
-                    "possibleValues": [{
-                            "value": "GET"
-                        },
-                        {
-                            "value": "POST"
-                        },
-                        {
-                            "value": "PUT"
-                        }
-                    ]
-                },
-                {
-                    "uniqueId": "parameter3",
-                    "name": "parameter3",
-                    "displayName": "Parameter3",
-                    "type": "textarea",
-                    "isOptional": true,
-                    "defaultValue": null,
-                    "description": "Description of the third parameter of the first task",
-                    "url": "tasks/task1/parameter3/values",
-                    "dependencies": [
-                        "parameter1"
-                    ]
-                }
-            ],
-            "outputParameters": [{
-                "uniqueId": "output_parameter1",
-                "name": "output_parameter1",
-                "displayName": "output_parameter1",
-                "description": "description of output_parameter1"
-            }]
-        },
-        {
-            "uniqueId": "Import Content Items",
+            "uniqueId": "ca.sa.cde.githubcontent.import",
             "name": "Import Content Items",
             "description": "Description of import content items",
             "serviceType": "CONTENT",
             "url": "content-sources/content-source/content-items",
             "inputParameters": [{
-                "uniqueId": "parameter1",
-                "name": "parameter1",
-                "displayName": "Parameter1",
-                "type": "string",
-                "isOptional": false,
-                "defaultValue": null,
-                "description": "Description of the first parameter of the first task",
-                "url": "tasks/task1/parameter1/values"
-            },
-            {
-                "uniqueId": "parameter2",
-                "name": "parameter2",
-                "displayName": "Parameter2",
-                "type": "string",
-                "isOptional": false,
-                "defaultValue": "GET",
-                "description": "Description of the second parameter of the first task",
-                "possibleValues": [{
-                        "value": "GET"
-                    },
-                    {
-                        "value": "POST"
-                    },
-                    {
-                        "value": "PUT"
-                    }
-                ]
-            }
-           
-        ]
+                    "uniqueId": "ca.sa.cde.githubcontent.import.milestone",
+                    "name": "Milestone",
+                    "displayName": "Milestone",
+                    "type": "string",
+                    "isOptional": true,
+                    "defaultValue": null,
+                    "description": "Enter the Milestone identifier, this parameter is optional. Leaving it black will retrieve all open issues",
+                    "url": "tasks/task1/parameter1/values"
+                },
+                {
+                    "uniqueId": "ca.sa.cde.githubcontent.import.label",
+                    "name": "issue Label",
+                    "displayName": "Github Issue Label",
+                    "type": "string",
+                    "isOptional": false,
+                    "defaultValue": "Bug",
+                    "description": "Select the Type of Issue you want to retrieve from Github.",
+                    "possibleValues": [{
+                            "value": "breaking change"
+                        },
+                        {
+                            "value": "bug"
+                        },
+                        {
+                            "value": "documentation"
+                        },
+                        {
+                            "value": "duplicate"
+                        },
+                        {
+                            "value": "enhancement"
+                        },
+                        {
+                            "value": "help wanted"
+                        },
+                        {
+                            "value": "in progress"
+                        },
+                        {
+                            "value": "invalid"
+                        },
+                        {
+                            "value": "question"
+                        },
+                        {
+                            "value": "ready"
+                        },
+                        {
+                            "value": "wont fix"
+                        }
+                    ]
+                },
+                {
+                    "uniqueId": "ca.sa.cde.githubcontent.import.state",
+                    "name": "Issue State",
+                    "displayName": "Github Issue State",
+                    "type": "string",
+                    "isOptional": false,
+                    "defaultValue": "closed",
+                    "description": "Select the Type of Issue you want to retrieve from Github.",
+                    "possibleValues": [{
+                            "value": "closed"
+                        },
+                        {
+                            "value": "open"
+                        }
+                    ]
+                }
+
+            ]
         },
         {
             "name": "Connectivity Test",

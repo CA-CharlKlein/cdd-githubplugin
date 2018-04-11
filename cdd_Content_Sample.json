@@ -1,0 +1,24 @@
+{
+    "contents": [{
+        "content": "bug for CAW 1",
+        "type": "DEFECT",
+        "displayType": "Bug",
+        "status": "To Do",
+        "id": "NAC-22",
+        "externalId": "15903"
+    }, {
+        "content": "bug for CAW 1",
+        "type": "DEFECT",
+        "displayType": "Bug",
+        "status": "To Do",
+        "id": "NAC-21",
+        "externalId": "15902"
+    }, {
+        "content": "bug for CAW 1",
+        "type": "DEFECT", 
+        "displayType": "Bug",
+        "status": "To Do",
+        "id": "NAC-20",
+        "externalId": "15901"
+    }]
+}
