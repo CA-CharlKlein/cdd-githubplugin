@@ -41,10 +41,10 @@
     },
     "services": [{
             "uniqueId": "ca.sa.cde.githubcontent.import",
-            "name": "Import Content Items",
-            "description": "Description of import content items",
+            "name": "Import Content",
+            "description": "Import Issues from Github",
             "serviceType": "CONTENT",
-            "url": "content-sources/content-source/content-items",
+            "url": "https://hook.io/charl.klein/cdd-githubcontent/content-sources/content-source/content-items",
             "inputParameters": [{
                     "uniqueId": "ca.sa.cde.githubcontent.import.milestone",
                     "name": "Milestone",
@@ -107,6 +107,9 @@
                     "defaultValue": "closed",
                     "description": "Select the Type of Issue you want to retrieve from Github.",
                     "possibleValues": [{
+                            "value": "all"
+                        },
+                        {
                             "value": "closed"
                         },
                         {
@@ -121,7 +124,7 @@
             "name": "Connectivity Test",
             "description": "Connection Test",
             "serviceType": "CONNECTIVITY_TEST",
-            "url": "connectivity-tests/connectivity-test",
+            "url": "https://hook.io/charl.klein/cdd-githubcontent/connectivity-tests/connectivity-test",
             "uniqueId": "Connectivity Test"
         }
     ]
