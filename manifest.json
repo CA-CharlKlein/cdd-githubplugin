@@ -14,7 +14,7 @@
         "endPointType": "Github",
         "parameters": [{
                 "uniqueId": "ca.sa.cde.githubcontent.endpoint.repoowner",
-                "name": "Repository Owner",
+                "name": "repositoryOwner",
                 "displayName": "Repository Owner",
                 "type": "string",
                 "isOptional": false,
@@ -22,7 +22,7 @@
             },
             {
                 "uniqueId": "ca.sa.cde.githubcontent.endpoint.repository",
-                "name": "Repository",
+                "name": "repository",
                 "displayName": "Repository",
                 "type": "string",
                 "isOptional": false,
@@ -30,7 +30,7 @@
             },
             {
                 "uniqueId": "ca.sa.cde.githubcontent.endpoint.useragent",
-                "name": "User Agent",
+                "name": "userAgent",
                 "displayName": "User Agent",
                 "description": "User Agent is Required to Access the Github API, Please put you application name or Github Username Here",
                 "type": "string",
@@ -47,7 +47,7 @@
             "url": "https://hook.io/charl.klein/cdd-githubcontent/content-items",
             "inputParameters": [{
                     "uniqueId": "ca.sa.cde.githubcontent.import.milestone",
-                    "name": "Milestone",
+                    "name": "milestone",
                     "displayName": "Milestone",
                     "type": "string",
                     "isOptional": true,
@@ -57,7 +57,7 @@
                 },
                 {
                     "uniqueId": "ca.sa.cde.githubcontent.import.label",
-                    "name": "issue Label",
+                    "name": "issueLabel",
                     "displayName": "Github Issue Label",
                     "type": "string",
                     "isOptional": false,
@@ -100,7 +100,7 @@
                 },
                 {
                     "uniqueId": "ca.sa.cde.githubcontent.import.state",
-                    "name": "Issue State",
+                    "name": "issueState",
                     "displayName": "Github Issue State",
                     "type": "string",
                     "isOptional": false,
