@@ -131,8 +131,8 @@ function requestHandler(hook) {
 
                     contentItems.push({
                         content: item.title,
-                        type: "DEFECT",
-                        displayType: "Bug",
+                        type: "TASK",
+                        displayType: item.labels[0].name,
                         status: item.state,
                         id: item.number,
                         externalId: item.id
