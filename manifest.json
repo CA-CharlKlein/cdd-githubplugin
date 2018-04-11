@@ -44,7 +44,7 @@
             "name": "Import Content",
             "description": "Import Issues from Github",
             "serviceType": "CONTENT",
-            "url": "https://hook.io/charl.klein/cdd-githubcontent/content-sources/content-source/content-items",
+            "url": "https://hook.io/charl.klein/cdd-githubcontent/content-items",
             "inputParameters": [{
                     "uniqueId": "ca.sa.cde.githubcontent.import.milestone",
                     "name": "Milestone",
@@ -124,7 +124,7 @@
             "name": "Connectivity Test",
             "description": "Connection Test",
             "serviceType": "CONNECTIVITY_TEST",
-            "url": "https://hook.io/charl.klein/cdd-githubcontent/connectivity-tests/connectivity-test",
+            "url": "https://hook.io/charl.klein/cdd-githubcontent/connectivity-test",
             "uniqueId": "Connectivity Test"
         }
     ]
