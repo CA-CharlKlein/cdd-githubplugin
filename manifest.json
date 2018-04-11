@@ -4,7 +4,7 @@
     "uniqueId": "ca.sa.cde.githubcontent",
     "description": "CA Release Automation Github Content Plugin powered by Hook.io",
     "iconUrl": "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png",
-    "version": "0.9",
+    "version": "1.0",
     "relativeUrl": false,
     "endpointTemplate": {
         "uniqueId": "ca.sa.cde.githubcontent.endpoint",
